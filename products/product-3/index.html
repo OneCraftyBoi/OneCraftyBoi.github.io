@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <title>Craftyboi | Product 3</title>
+    <head>
   <link rel="stylesheet" href="/custom.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <link rel="preconnect" href="https://app.snipcart.com">
@@ -54,13 +57,13 @@
   
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="OneCraftyBoi.github.io/images/hero-image.png" /><meta name="twitter:title" content="Product 3"/>
+<meta name="twitter:image" content="https://i.imgur.com/AXeQSUm.png" /><meta name="twitter:title" content="Product 3"/>
 <meta name="twitter:description" content="Here is the detailed description of Product 3."/>
 
 <meta itemprop="name" content="Product 3">
 <meta itemprop="description" content="Here is the detailed description of Product 3.">
 
-<meta itemprop="wordCount" content="8"><meta itemprop="image" content="OneCraftyBoi.github.io/images/hero-image.png" />
+<meta itemprop="wordCount" content="8"><meta itemprop="image" content="https://i.imgur.com/AXeQSUm.png" />
 <meta itemprop="keywords" content="" />
 
 
@@ -166,7 +169,21 @@
   </head>
 
 
-  <body><nav class="navbar navbar-expand-xl navbar-light bg-light py-4">
+    <style>
+        .snipcart-add-item.buy-button {
+            border-radius: 5px;
+            border: none;
+            background-image: linear-gradient(to right, #5694d6, #0a315a);
+            color: white;
+            padding: 10px 10px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-xl navbar-light bg-light py-4">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="OneCraftyBoi.github.io">
       
@@ -208,29 +225,60 @@
   </div>
 </nav>
 
-  <section class="section blog-single py-5">
-    <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-12">
-          
-            <h2 class="display-1 fw-bold text-center text-primary pb-3">Product 3</h2>
-          
-          
-        </div>
-      </div>
-      <div class="row pb-5">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="blog-content fs-5">
-            <p>Here is the detailed description of Product 3.</p>
+    <div class="product-detail-page" style="display: flex; margin: 5%;">
 
-          </div>
+        <div class="thumbnail-strip" style="width: 100px;">
+            
+            <img src="https://i.imgur.com/AXeQSUm.png" alt="Product 3" class="thumbnail">
+            
         </div>
-      </div>
-      <div class="row pb-5">
-      </div>
+        <div class="image-gallery">
+            
+            <img src="https://i.imgur.com/AXeQSUm.png" alt="Product 3" class="main-image" style="max-width: 40%;">
+        </div>
+
+
+        <div class="product-info-container"
+            style="text-align: left; padding-left: 20px; display: flex; flex-direction: column;">
+            <div class="title" style="font-size: 25px; margin-bottom: 10px;">Product 3</div>
+            <div class="description" style="text-align: left;"><p>Here is the detailed description of Product 3.</p>
+</div>
+
+            
+            
+            
+            
+            
+            
+            <div class="options-container" data-default-price="49.99">
+                :&nbsp;&nbsp;&nbsp;<br>
+                
+                
+                    
+                    
+                    
+                        <a href="#" class="option-box" data-price="+0"></a> 
+                    
+                
+            </div>
+                        
+            
+            <div class="button" style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
+                <p class="price" style="margin: 0; margin-right: 10px; font-weight: bold; font-size: 20px;">$49.99</p>
+
+                <button class="snipcart-add-item buy-button" data-item-id="3" data-item-price="49.99"
+                    data-item-url="/products/product-3" data-item-name="Product 3" data-item-image="https://i.imgur.com/AXeQSUm.png"
+                    data-item-description="All she wanted was the answer, but she had no idea how much she would hate it." data-item-link="/products/product-3"
+                    data-item-custom1-name="" data-item-custom1-options="">Add to
+                    Cart</button>
+            </div>
+            
+            
+
+        </div>
     </div>
-  </section>
-<footer class="shared footer bg-blue-light centered-element py-5">
+
+    <footer class="shared footer bg-blue-light centered-element py-5">
   <div class="container">
     <div class="row pb-5">
       <div class="col-12 col-xl-4 text-center text-xl-start pb-4">
@@ -315,5 +363,48 @@
     </div>
   </div>
 </footer>
+
+
+    <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="ZWFjYWIyNTEtMWZlNS00ZDBmLWE5MjktNDI0N2UyMDg0YWQwNjM4NDE0OTE4NTM0NTU2MTcx">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.querySelector('.main-image');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function () {
+                    mainImage.src = this.src;
+                });
+            });
+        });
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        var optionBoxes = document.querySelectorAll('.option-box');
+    
+        
+        optionBoxes.forEach(function(box) {
+            box.addEventListener('click', function(event) {
+                event.preventDefault(); 
+    
+                
+                var defaultPrice = parseFloat(document.querySelector('.options-container').getAttribute('data-default-price'));
+                
+                var additionalPrice = parseFloat(this.getAttribute('data-price').replace('+', ''));
+                
+                var totalPrice = defaultPrice + additionalPrice;
+    
+                
+                document.querySelector('.price').textContent = '$' + totalPrice.toFixed(2);
+            });
+        });
+    });
+    </script>
+    
+
 </body>
+
 </html>
