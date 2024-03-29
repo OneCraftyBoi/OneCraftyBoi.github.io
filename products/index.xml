@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Products on Craftyboi</title>
-    <link>OneCraftyBoi.github.io/products/</link>
+    <link>https://OneCraftyBoi.github.io/products/</link>
     <description>Recent content in Products on Craftyboi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="OneCraftyBoi.github.io/products/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://OneCraftyBoi.github.io/products/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Product 1</title>
-      <link>OneCraftyBoi.github.io/products/product-1/</link>
+      <link>https://OneCraftyBoi.github.io/products/product-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>OneCraftyBoi.github.io/products/product-1/</guid>
+      <guid>https://OneCraftyBoi.github.io/products/product-1/</guid>
       <description> 100% Polyester with a satin feel Printed twill patch artwork on front and back Embroidered metallic artwork on label and sleeve Full zip-up Ribbed banded cuffs and waist Relaxed fit Imported Officially licensed Samurai Champloo merchandise </description>
     </item>
     <item>
       <title>Product 2</title>
-      <link>OneCraftyBoi.github.io/products/product-2/</link>
+      <link>https://OneCraftyBoi.github.io/products/product-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>OneCraftyBoi.github.io/products/product-2/</guid>
+      <guid>https://OneCraftyBoi.github.io/products/product-2/</guid>
       <description>Here is the detailed description of Product 2.</description>
     </item>
     <item>
       <title>Product 3</title>
-      <link>OneCraftyBoi.github.io/products/product-3/</link>
+      <link>https://OneCraftyBoi.github.io/products/product-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>OneCraftyBoi.github.io/products/product-3/</guid>
+      <guid>https://OneCraftyBoi.github.io/products/product-3/</guid>
       <description>Here is the detailed description of Product 3.</description>
     </item>
   </channel>
