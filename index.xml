@@ -86,11 +86,11 @@
       <description>Here is the detailed description of Product 3.</description>
     </item>
     <item>
-      <title>Store</title>
-      <link>OneCraftyBoi.github.io/store/</link>
+      <title>Products</title>
+      <link>OneCraftyBoi.github.io/products/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>OneCraftyBoi.github.io/store/</guid>
-      <description></description>
+      <guid>OneCraftyBoi.github.io/products/</guid>
+      <description>Price: Low to High&#xD;Price: High to Low&#xD;Name: A to Z&#xD;Name: Z to A&#xD;Product 1&#xD;Never underestimate the willingness of the greedy to throw you under the bus.</description>
     </item>
   </channel>
 </rss>

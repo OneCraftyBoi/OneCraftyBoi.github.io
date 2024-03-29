@@ -200,7 +200,7 @@
           </li>
         
           <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/store">Store</a>
+            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/products">Products</a>
           </li>
         
           <li class="nav-item text-center">
@@ -238,12 +238,11 @@
         </div>
 
 
-        <div class="product-info-container"
-            style="text-align: left; padding-left: 20px; display: flex; flex-direction: column;">
+        <div class="product-info-container" style="text-align: left; padding-left: 20px; display: flex; flex-direction: column;">
             <div class="title" style="font-size: 25px; margin-bottom: 10px;">Product 3</div>
             <div class="description" style="text-align: left;"><p>Here is the detailed description of Product 3.</p>
 </div>
-
+        
             
             
             
@@ -257,26 +256,22 @@
                     
                     
                     
-                        <a href="#" class="option-box" data-price="+0"></a> 
+                        <a href="#" class="option-box" data-price="+0" data-option-value=""></a>
                     
                 
             </div>
-                        
-            
+        
             <div class="button" style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
                 <p class="price" style="margin: 0; margin-right: 10px; font-weight: bold; font-size: 20px;">$49.99</p>
-
-                <button class="snipcart-add-item buy-button" data-item-id="3" data-item-price="49.99"
-                    data-item-url="/products/product-3" data-item-name="Product 3" data-item-image="https://i.imgur.com/AXeQSUm.png"
-                    data-item-description="All she wanted was the answer, but she had no idea how much she would hate it." data-item-link="/products/product-3"
-                    data-item-custom1-name="" data-item-custom1-options="">Add to
-                    Cart</button>
+        
+                <button id="addToCartButton" class="snipcart-add-item buy-button" data-item-id="3" data-item-price="49.99"
+                        data-item-url="/products/product-3" data-item-name="Product 3" data-item-image="https://i.imgur.com/AXeQSUm.png"
+                        data-item-description="All she wanted was the answer, but she had no idea how much she would hate it." data-item-custom1-name="" data-item-custom1-options="">Add to Cart</button>
             </div>
             
             
-
         </div>
-    </div>
+            </div>
 
     <footer class="shared footer bg-blue-light centered-element py-5">
   <div class="container">
@@ -310,7 +305,7 @@
             </li>
           
             <li class="">
-              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/store">Store</a>
+              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/products">Products</a>
             </li>
           
             <li class="">
@@ -384,25 +379,38 @@
     document.addEventListener("DOMContentLoaded", function() {
         
         var optionBoxes = document.querySelectorAll('.option-box');
-    
+
         
         optionBoxes.forEach(function(box) {
             box.addEventListener('click', function(event) {
                 event.preventDefault(); 
-    
+
+                
+                optionBoxes.forEach(function(otherBox) {
+                    otherBox.classList.remove('selected');
+                });
+
+                
+                this.classList.add('selected');
+
                 
                 var defaultPrice = parseFloat(document.querySelector('.options-container').getAttribute('data-default-price'));
                 
                 var additionalPrice = parseFloat(this.getAttribute('data-price').replace('+', ''));
                 
                 var totalPrice = defaultPrice + additionalPrice;
-    
+
                 
                 document.querySelector('.price').textContent = '$' + totalPrice.toFixed(2);
+
+                
+                var addToCartButton = document.querySelector('#addToCartButton');
+                addToCartButton.setAttribute("data-item-custom1-value", this.getAttribute('data-option-value'));
             });
         });
     });
-    </script>
+</script>
+
     
 
 </body>

@@ -58,29 +58,12 @@ element.style {
     display: unset !important;
 }
 
-.product__title {
-    cursor: pointer;
-    text-decoration: none !important;
-
-}
-.product__link .product__title {
-    text-decoration: none !important;
-}
-
-.product__link {
-    text-decoration: none;
-    
-}
-
-.product__link:hover .product__title {
-    cursor: pointer;
-    text-decoration: none !important;
-
-}
 
 .product-detail-container {
     display: flex;
 }
+
+
 .image-gallery {
     display: contents;
 }
@@ -132,4 +115,9 @@ element.style {
 .option-box:hover {
     background-color: #e0e0e0;
     text-decoration: none;
+}
+
+
+.sortOptions{
+    margin-bottom: 100px;
 }

@@ -182,7 +182,7 @@
           </li>
         
           <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/store">Store</a>
+            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/products">Products</a>
           </li>
         
           <li class="nav-item text-center">
@@ -248,23 +248,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-             
             gap: 20px;
-             
         }
 
         .product {
             box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-
             border-radius: 10px;
             padding: 20px;
-             
             margin-bottom: 20px;
-             
-            width: calc(90% / 3);
-             
+            width: calc((100% - 40px) / 3);  
             box-sizing: border-box;
-             
         }
 
         .product__details {
@@ -272,21 +265,14 @@
             justify-content: space-between;
             align-items: center;
             margin-top: 10px;
-             
         }
 
         .product__image {
             display: block;
             max-width: 100%;
-             
-            max-height: 100%;
             height: auto;
-            margin-left: auto;
-             
-            margin-right: auto;
-             
+            margin: auto;
             border-radius: 5px;
-             
         }
 
         .product__name {
@@ -304,75 +290,67 @@
             margin-top: 10px;
         }
 
-        .snipcart-add-item.buy-button {
-            border-radius: 5px;
-            border: none;
-
-             
-            background-image: linear-gradient(to right, #5694d6, #0a315a);
-            color: white;
-             
-            padding: 10px 10px;
-             
-            text-transform: uppercase;
+         
+        .product__information a, .product__title {
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
         }
+
+         
+
     </style>
 
-<div class="products">
-    
-    <div class="product">
-        <div class="product__information">
-            <a href="/products/product-1" class="product_link">
-                <h2 class="product__title">Product 1</h2>
-            </a>
-            <a href="/products/product-1" class="product__link">
-                <img class="product__image" src="https://i.imgur.com/TuUz4ut.png" alt="Product 1">
-            </a>
-            <p class="product__description">Never underestimate the willingness of the greedy to throw you under the bus.</p>
-            <div class="product__details">
-                <span class="product__price">$29.99</span>
-
+    <div class="products">
+        
+        
+        <div class="product">
+            <div class="product__information">
+                <a href="/products/product-1" class="product__link">
+                    <h2 class="product__title">Product 1</h2>
+                </a>
+                <a href="/products/product-1" class="product__link">
+                    <img class="product__image" src="https://i.imgur.com/TuUz4ut.png" alt="Product 1">
+                </a>
+                <p class="product__description">Never underestimate the willingness of the greedy to throw you under the bus.</p>
+                <div class="product__details">
+                    <span class="product__price">$29.99</span>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="product">
-        <div class="product__information">
-            <a href="/products/product-2" class="product_link">
-                <h2 class="product__title">Product 2</h2>
-            </a>
-            <a href="/products/product-2" class="product__link">
-                <img class="product__image" src="https://i.imgur.com/ry3kd9f.png" alt="Product 2">
-            </a>
-            <p class="product__description">We will not allow you to bring your pet armadillo along.</p>
-            <div class="product__details">
-                <span class="product__price">$39.99</span>
-
+        
+        <div class="product">
+            <div class="product__information">
+                <a href="/products/product-2" class="product__link">
+                    <h2 class="product__title">Product 2</h2>
+                </a>
+                <a href="/products/product-2" class="product__link">
+                    <img class="product__image" src="https://i.imgur.com/ry3kd9f.png" alt="Product 2">
+                </a>
+                <p class="product__description">We will not allow you to bring your pet armadillo along.</p>
+                <div class="product__details">
+                    <span class="product__price">$39.99</span>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="product">
-        <div class="product__information">
-            <a href="/products/product-3" class="product_link">
-                <h2 class="product__title">Product 3</h2>
-            </a>
-            <a href="/products/product-3" class="product__link">
-                <img class="product__image" src="https://i.imgur.com/AXeQSUm.png" alt="Product 3">
-            </a>
-            <p class="product__description">All she wanted was the answer, but she had no idea how much she would hate it.</p>
-            <div class="product__details">
-                <span class="product__price">$49.99</span>
-
+        
+        <div class="product">
+            <div class="product__information">
+                <a href="/products/product-3" class="product__link">
+                    <h2 class="product__title">Product 3</h2>
+                </a>
+                <a href="/products/product-3" class="product__link">
+                    <img class="product__image" src="https://i.imgur.com/AXeQSUm.png" alt="Product 3">
+                </a>
+                <p class="product__description">All she wanted was the answer, but she had no idea how much she would hate it.</p>
+                <div class="product__details">
+                    <span class="product__price">$49.99</span>
+                </div>
             </div>
         </div>
+        
     </div>
-    
-</div>
-
-
 </section>
-
  
 <footer class="shared footer bg-blue-light centered-element py-5">
   <div class="container">
@@ -406,7 +384,7 @@
             </li>
           
             <li class="">
-              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/store">Store</a>
+              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/products">Products</a>
             </li>
           
             <li class="">

@@ -200,7 +200,7 @@
           </li>
         
           <li class="nav-item text-center">
-            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/store">Store</a>
+            <a class="nav-link text-primary px-4" href="OneCraftyBoi.github.io/products">Products</a>
           </li>
         
           <li class="nav-item text-center">
@@ -244,8 +244,7 @@
         </div>
 
 
-        <div class="product-info-container"
-            style="text-align: left; padding-left: 20px; display: flex; flex-direction: column;">
+        <div class="product-info-container" style="text-align: left; padding-left: 20px; display: flex; flex-direction: column;">
             <div class="title" style="font-size: 25px; margin-bottom: 10px;">Product 1</div>
             <div class="description" style="text-align: left;"><ul>
 <li>100% Polyester with a satin feel</li>
@@ -258,7 +257,7 @@
 <li>Officially licensed Samurai Champloo merchandise</li>
 </ul>
 </div>
-
+        
             
             
             <div class="options-container" data-default-price="29.99">
@@ -267,29 +266,25 @@
                 
                     
                     
-                     
-                        
-                        <a href="#" class="option-box" data-price="&#43;0">Without LED</a>
+                    
+                        <a href="#" class="option-box" data-price="+0" data-option-value="Without LED">Without LED</a>
                     
                 
                     
                     
-                     
+                    
                         
-                        <a href="#" class="option-box" data-price="&#43;10.00">LED</a>
+                        <a href="#" class="option-box" data-price="&#43;10.00" data-option-value="LED">LED</a>
                     
                 
             </div>
-                        
-            
+        
             <div class="button" style="display: flex; align-items: center; justify-content: left; margin-top: 20px;">
                 <p class="price" style="margin: 0; margin-right: 10px; font-weight: bold; font-size: 20px;">$29.99</p>
-
-                <button class="snipcart-add-item buy-button" data-item-id="1" data-item-price="29.99"
-                    data-item-url="/products/product-1" data-item-name="Product 1" data-item-image="https://i.imgur.com/TuUz4ut.png"
-                    data-item-description="Never underestimate the willingness of the greedy to throw you under the bus." data-item-link="/products/product-1"
-                    data-item-custom1-name="Lights" data-item-custom1-options="Without LED[&#43;0] | LED[&#43;10.00]">Add to
-                    Cart</button>
+        
+                <button id="addToCartButton" class="snipcart-add-item buy-button" data-item-id="1" data-item-price="29.99"
+                        data-item-url="/products/product-1" data-item-name="Product 1" data-item-image="https://i.imgur.com/TuUz4ut.png"
+                        data-item-description="Never underestimate the willingness of the greedy to throw you under the bus." data-item-custom1-name="Lights" data-item-custom1-options="Without LED | LED[&#43;10.00]">Add to Cart</button>
             </div>
             
             
@@ -297,9 +292,8 @@
             
             
             
-
         </div>
-    </div>
+            </div>
 
     <footer class="shared footer bg-blue-light centered-element py-5">
   <div class="container">
@@ -333,7 +327,7 @@
             </li>
           
             <li class="">
-              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/store">Store</a>
+              <a class="small text-black-61 text-decoration-none" href="OneCraftyBoi.github.io/products">Products</a>
             </li>
           
             <li class="">
@@ -407,25 +401,38 @@
     document.addEventListener("DOMContentLoaded", function() {
         
         var optionBoxes = document.querySelectorAll('.option-box');
-    
+
         
         optionBoxes.forEach(function(box) {
             box.addEventListener('click', function(event) {
                 event.preventDefault(); 
-    
+
+                
+                optionBoxes.forEach(function(otherBox) {
+                    otherBox.classList.remove('selected');
+                });
+
+                
+                this.classList.add('selected');
+
                 
                 var defaultPrice = parseFloat(document.querySelector('.options-container').getAttribute('data-default-price'));
                 
                 var additionalPrice = parseFloat(this.getAttribute('data-price').replace('+', ''));
                 
                 var totalPrice = defaultPrice + additionalPrice;
-    
+
                 
                 document.querySelector('.price').textContent = '$' + totalPrice.toFixed(2);
+
+                
+                var addToCartButton = document.querySelector('#addToCartButton');
+                addToCartButton.setAttribute("data-item-custom1-value", this.getAttribute('data-option-value'));
             });
         });
     });
-    </script>
+</script>
+
     
 
 </body>
